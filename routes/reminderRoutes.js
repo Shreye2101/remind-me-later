@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { createReminder } = require('../controllers/reminderController');
 const { reminderValidationRules } = require('../validators/reminderValidator');
 const { validationResult } = require('express-validator');
+const { createReminder, getReminders } = require('../controllers/reminderController');
 
 router.post('/', reminderValidationRules, (req, res) => {
   const errors = validationResult(req);
@@ -11,5 +11,7 @@ router.post('/', reminderValidationRules, (req, res) => {
   }
   createReminder(req, res);
 });
+
+router.get('/', getReminders);
 
 module.exports = router;

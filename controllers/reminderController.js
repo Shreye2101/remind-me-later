@@ -13,3 +13,13 @@ exports.createReminder = async (req, res) => {
     res.status(500).json({ error: 'Server Error' });
   }
 };
+
+exports.getReminders = async (req, res) => {
+  try {
+    const reminders = await Reminder.find().sort({ dateTime: 1 }); // sorted by date ascending
+    res.json(reminders);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server Error' });
+  }
+};
