@@ -98,8 +98,6 @@ Create a new reminder.
 }
 ```
 
-**GET** `https://remind-me-later-75eu.onrender.com/api/reminders`  
-- Returns all saved reminders.
 
 ---
 PRs and feedback are welcome!
