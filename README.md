@@ -77,6 +77,10 @@ Create a new reminder.
 ```
 - **Response**: 201 Created + Reminder JSON
 
+- ### 📥 GET /api/reminders
+Fetch all saved reminders.
+- **Response**: 200 OK + Array of reminders
+
 
 ## 📦 Required Packages
 - express
@@ -97,7 +101,8 @@ Create a new reminder.
   "channel": "sms"
 }
 ```
-
+**GET** `https://remind-me-later-75eu.onrender.com/api/reminders`  
+- Returns all saved reminders.
 
 ---
 PRs and feedback are welcome!
